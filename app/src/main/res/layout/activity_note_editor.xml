@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/editorRoot"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/background"
+    android:fillViewport="true"
+    android:paddingStart="18dp"
+    android:paddingTop="18dp"
+    android:paddingEnd="18dp"
+    android:paddingBottom="22dp">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/backButton"
+            android:layout_width="wrap_content"
+            android:layout_height="45dp"
+            android:background="@drawable/secondary_button_bg"
+            android:backgroundTint="@null"
+            android:text="@string/back"
+            android:paddingStart="16dp"
+            android:paddingEnd="16dp"
+            android:textAllCaps="false"
+            android:textColor="@color/blue" />
+
+        <TextView
+            android:id="@+id/editorHeading"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="21dp"
+            android:text="@string/create_note"
+            android:textColor="@color/ink"
+            android:textSize="30sp"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="4dp"
+            android:text="@string/editor_subtitle"
+            android:textColor="@color/muted"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/editor_storage_label"
+            android:letterSpacing="0.09"
+            android:textColor="@color/muted"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/editorStorage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="7dp"
+            android:background="@drawable/secondary_button_bg"
+            android:backgroundTint="@null"
+            android:padding="12dp"
+            android:text="@string/sqlite_target"
+            android:textColor="@color/blue"
+            android:textSize="14sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/title_label"
+            android:letterSpacing="0.09"
+            android:textColor="@color/muted"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/titleInput"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_bg"
+            android:hint="@string/title_hint"
+            android:inputType="text|textCapSentences"
+            android:maxLines="1"
+            android:freezesText="true"
+            android:paddingStart="15dp"
+            android:paddingEnd="15dp"
+            android:textColor="@color/ink"
+            android:textColorHint="@color/muted"
+            android:textSize="16sp" />
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="23dp"
+            android:text="@string/content_label"
+            android:letterSpacing="0.09"
+            android:textColor="@color/muted"
+            android:textSize="11sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/contentInput"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/input_bg"
+            android:gravity="top|start"
+            android:hint="@string/content_hint"
+            android:inputType="text|textCapSentences|textMultiLine"
+            android:freezesText="true"
+            android:minLines="5"
+            android:padding="15dp"
+            android:textColor="@color/ink"
+            android:textColorHint="@color/muted"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/saveButton"
+            android:layout_width="match_parent"
+            android:layout_height="56dp"
+            android:layout_marginTop="28dp"
+            android:background="@drawable/primary_button_bg"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="@string/save_note"
+            android:textAllCaps="false"
+            android:textColor="@color/surface"
+            android:textSize="16sp" />
+
+        <Button
+            android:id="@+id/deleteButton"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="12dp"
+            android:background="@drawable/danger_button_bg"
+            android:backgroundTint="@null"
+            android:stateListAnimator="@null"
+            android:text="@string/delete"
+            android:textAllCaps="false"
+            android:textColor="@color/danger"
+            android:textSize="15sp"
+            android:visibility="gone" />
+    </LinearLayout>
+</ScrollView>

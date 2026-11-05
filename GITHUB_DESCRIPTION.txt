@@ -1,0 +1,1 @@
+Offline Android notes app (Java/XML) with CRUD, SQLite & SharedPreferences storage, conflict-aware one-way sync, validation and JUnit tests. MADT Lab #5.

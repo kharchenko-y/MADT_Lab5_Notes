@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/note_card_bg"
+    android:orientation="vertical"
+    android:padding="18dp"
+    android:minHeight="91dp">
+    <TextView
+        android:id="@+id/noteTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:textColor="@color/ink"
+        android:textSize="17sp"
+        android:fontFamily="sans-serif-medium" />
+    <TextView
+        android:id="@+id/notePreview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="6dp"
+        android:maxLines="2"
+        android:ellipsize="end"
+        android:textColor="@color/muted"
+        android:textSize="13sp" />
+</LinearLayout>

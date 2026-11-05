@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Local Notes</string>
+    <string name="app_heading">Your notes</string>
+    <string name="app_subtitle">Two local stores. You choose where each note lives.</string>
+    <string name="storage_label">CURRENT STORAGE</string>
+    <string-array name="storage_options">
+        <item>SQLite · Primary</item>
+        <item>SharedPreferences · Secondary</item>
+    </string-array>
+    <string name="sqlite_description">SQLite notes are stored in the primary database.</string>
+    <string name="preferences_description">SharedPreferences notes are kept separately in local JSON.</string>
+    <string name="new_note">+ New note</string>
+    <string name="sync_button">Sync →</string>
+    <string name="notes_label">NOTES IN THIS STORE</string>
+    <plurals name="notes_count">
+        <item quantity="one">%d note</item>
+        <item quantity="other">%d notes</item>
+    </plurals>
+    <string name="empty_notes">No notes here yet.\nCreate one to get started.</string>
+    <string name="sync_dialog_title">Synchronize notes?</string>
+    <string name="sync_dialog_message">Copy notes from SQLite to SharedPreferences. Matching IDs are copied from SQLite only when the SQLite version is newer. Newer or equally-timed SharedPreferences edits are kept as conflicts. Notes found only in SharedPreferences are preserved. This does not synchronize in reverse.</string>
+    <string name="sync_confirm">Sync notes</string>
+    <string name="cancel">Cancel</string>
+    <string name="sync_result">Sync complete: %1$d added, %2$d updated, %3$d unchanged, %4$d conflicts preserved.</string>
+    <string name="sync_no_primary_notes">SQLite has no notes to copy.</string>
+    <string name="sync_error">Unable to synchronize notes. Existing data was not intentionally cleared.</string>
+    <string name="storage_error">Unable to access this note storage.</string>
+    <string name="note_not_found">This note no longer exists in this storage.</string>
+    <string name="create_note">Create note</string>
+    <string name="edit_note">Edit note</string>
+    <string name="editor_subtitle">A title and content are required.</string>
+    <string name="editor_storage_label">SAVE LOCATION</string>
+    <string name="sqlite_target">SQLite · Primary</string>
+    <string name="preferences_target">SharedPreferences · Secondary</string>
+    <string name="title_label">TITLE</string>
+    <string name="title_hint">Give this note a title</string>
+    <string name="content_label">CONTENT</string>
+    <string name="content_hint">Write something worth keeping…</string>
+    <string name="save_note">Save note</string>
+    <string name="delete">Delete</string>
+    <string name="back">‹ Back</string>
+    <string name="title_required">Enter a title (not only spaces).</string>
+    <string name="content_required">Enter note content (not only spaces).</string>
+    <string name="note_saved">Note saved.</string>
+    <string name="note_deleted">Note deleted.</string>
+    <string name="discard_changes_title">Discard unsaved changes?</string>
+    <string name="discard_changes_message">Your changes have not been saved. Leave without saving them?</string>
+    <string name="discard_changes">Discard</string>
+    <string name="keep_editing">Keep editing</string>
+    <string name="delete_confirmation_title">Delete this note?</string>
+    <string name="delete_confirmation_body">This removes the note from the selected storage only. This action cannot be undone.</string>
+</resources>
