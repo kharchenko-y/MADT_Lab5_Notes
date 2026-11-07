@@ -1,8 +1,8 @@
-# Local Notes — MADT Lab #5 (Viber)
+# Local Notes — Android App
 
-A small **offline Android notes application** demonstrating multiple Activities, explicit Intent data transfer, CRUD operations, and two independent local persistence mechanisms. Built with **Java and XML** for *Mobile Applications Development Techniques (MADT), Lab #5 — Activities interactions and storage*.
+**Local Notes** is an offline Android application built with **Java and XML**. It supports full note CRUD, independent local storage backends, and navigation between a notes list and editor.
 
-The app uses **SQLite as its primary store** and **SharedPreferences with JSON as its secondary store**. Users choose which store to work with and can explicitly synchronize notes **from SQLite to SharedPreferences**, while preserving newer edits in the destination.
+Notes can be stored in **SQLite** or **SharedPreferences (JSON)**. Users choose where to work and can manually synchronize from SQLite to SharedPreferences using a conflict-aware merge that preserves newer destination edits.
 
 ## Features
 
@@ -166,7 +166,7 @@ The repository includes **34 JUnit 4 unit-test methods** across four test classe
 | `NoteSyncPlannerTest` | 13 | Inserts, preservation of secondary-only notes, timestamp conflicts, updates, idempotence, and input safety. |
 | `NoteDraftGuardTest` | 8 | Untouched vs. modified drafts, blank/new drafts, whitespace normalization, and clearing saved text. |
 
-**Evidence provenance:** The separate Code Review session reported **34/34 host-side tests passed** using temporary JUnit-compatible test shims (not an Android SDK build). The student reported the reviewed app functioning on **Pixel 4 API 34** with CRUD, both stores, synchronization, and unsaved-change protection. An earlier full Gradle `BUILD SUCCESSFUL` report applied to the **pre-review** generation; run the command above against this reviewed version for a fresh Gradle result.
+**Validation:** All **34 Java test methods** passed in a temporary host-side runner using JUnit-compatible shims (not an Android Gradle build). Manual checks on **Pixel 4 API 34** were reported successful for CRUD, both storage options, synchronization, and unsaved-change protection. The available successful Gradle build log was from before the final code changes; use the command above to verify a fresh build of the reviewed source.
 
 ### Recommended on-device regression checks
 
@@ -190,8 +190,6 @@ The repository includes **34 JUnit 4 unit-test methods** across four test classe
 - No database migration beyond the initial SQLite schema (`version = 1`) is implemented.
 - Automated tests cover domain behavior, not Android persistence and lifecycle integration.
 
-## Assignment workflow
+## Engineering notes
 
-This is the **post–Code Review** source tree. Code generation, independent Code Review (two prioritized fixes), and documentation were conducted in **separate AI sessions**. GitHub publication/commit/push and the final `ListOfsessions.md` submission belong to later separate steps, following the course's Viber-assignment instructions.
-
-See `CODEGEN_SESSION_NOTES.md`, `CODE_REVIEW_SESSION_NOTES.md`, and `DOCUMENTATION_SESSION_NOTES.md` for the documented AI-session boundaries and student involvement.
+The two persistence backends implement the same CRUD interface, while synchronization and unsaved-draft detection live in separate Java classes. This keeps storage decisions and merge rules independently testable instead of coupling them to the Activities.
